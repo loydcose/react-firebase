@@ -1,0 +1,20 @@
+**on the firestore > rules**
+
+write syntax is for create, update and delete
+
+
+most of the times, you might want to avoid the default rules
+and change that into this:
+
+allow create: if request.auth != null && request.auth.uid == request.resource.data.userId
+allow update, delete: if request.auth !== null
+allow read: if true
+
+explanation*
+the request obj there is the request form that contains user and doc information
+after submitting the handleSubmit or onClick functions on your react
+note* - update and delete might not contains request.resource.data, if your not passing and formValues 
+
+create - allow user to create if he's logged in and if he's the one who's about to create the document
+update, delete - allow user to update and delete, only of he is logged in
+read - all user can see and access documents of other users
