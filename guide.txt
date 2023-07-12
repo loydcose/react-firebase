@@ -18,3 +18,7 @@ note* - update and delete might not contains request.resource.data, if your not 
 create - allow user to create if he's logged in and if he's the one who's about to create the document
 update, delete - allow user to update and delete, only of he is logged in
 read - all user can see and access documents of other users
+
+** deploying or hosting firebase
+go to your build tab > hosting > get started and follow the commands there
+when u input firebase init, kindly choose the Hosting: configure files for firebase hosting and set up github.... (press space and enter)
